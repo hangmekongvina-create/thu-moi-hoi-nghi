@@ -3,13 +3,8 @@
   "title": "HỘI NGHỊ KHÁCH HÀNG 2026",
   "subtitle": "",
   "cover": null,
-  "pdf": null,
-  "pages": [
-    "invitations/hoi-nghi-khach-hang-2026/page-01.png",
-    "invitations/hoi-nghi-khach-hang-2026/page-02.png",
-    "invitations/hoi-nghi-khach-hang-2026/page-03.png",
-    "invitations/hoi-nghi-khach-hang-2026/page-04.png"
-  ],
+  "pdf": "invitations/hoi-nghi-khach-hang-2026/invitation.pdf",
+  "pages": [],
   "music": "invitations/hoi-nghi-khach-hang-2026/background.mp3",
-  "updatedAt": "2026-11-19T07:55:10.973Z"
+  "updatedAt": "2026-11-19T07:58:34.237Z"
 }
