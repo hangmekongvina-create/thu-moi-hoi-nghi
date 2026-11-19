@@ -22,8 +22,41 @@ try{
  $('openInvitation').onclick=()=>{
   $('intro').hidden=true;$('reader').hidden=false;
   if(data.music)$('backgroundMusic').play().then(()=>$('soundToggle').innerHTML='♫ <span>TẮT NHẠC</span>').catch(()=>{});
-  const width=Math.max(260,Math.min(520,Math.floor(window.innerWidth*.43))),height=Math.max(360,Math.min(720,Math.floor(window.innerHeight*.72)));
-  const flip=new St.PageFlip($('book'),{width,height,size:'stretch',minWidth:260,maxWidth:650,minHeight:360,maxHeight:900,showCover:false,drawShadow:true,flippingTime:850,usePortrait:true,autoSize:true});
+  const width=Math.max(260,Math.min(520,Math.floor(window.innerWidth*.43))),
+const isMobile = window.innerWidth <= 760;
+
+let width, height;
+
+if (isMobile) {
+  width = Math.min(420, window.innerWidth - 24);
+  height = Math.min(620, window.innerHeight - 170);
+} else {
+  // Máy tính: tăng kích thước sách
+  height = Math.min(820, window.innerHeight - 150);
+  width = Math.min(
+    680,
+    (window.innerWidth - 100) / 2,
+    height * 0.78
+  );
+}
+
+ 
+const flip = new St.PageFlip($('book'), {
+  width,
+  height,
+  size: 'stretch',
+  minWidth: 260,
+  maxWidth: 680,
+  minHeight: 360,
+  maxHeight: 900,
+  showCover: false,
+  drawShadow: true,
+  flippingTime: 850,
+  usePortrait: true,
+  autoSize: true,
+  maxShadowOpacity: 0.25
+});
+
   flip.loadFromHTML(pages);
   const refresh=()=>{$('pageCount').textContent=(flip.getCurrentPageIndex()+1)+' / '+flip.getPageCount()};
   flip.on('flip',refresh);refresh();$('previous').onclick=()=>flip.flipPrev();$('next').onclick=()=>flip.flipNext();
