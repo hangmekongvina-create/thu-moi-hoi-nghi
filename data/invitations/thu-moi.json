@@ -1,0 +1,15 @@
+{
+  "id": "thu-moi",
+  "title": "THƯ MỜI",
+  "subtitle": "TRÂN TRỌNG KÍNH MỜI",
+  "cover": null,
+  "pdf": null,
+  "pages": [
+    "invitations/thu-moi/page-01.png",
+    "invitations/thu-moi/page-02.png",
+    "invitations/thu-moi/page-03.png",
+    "invitations/thu-moi/page-04.png"
+  ],
+  "music": "invitations/thu-moi/background.mp3",
+  "updatedAt": "2026-11-19T04:40:35.867Z"
+}
