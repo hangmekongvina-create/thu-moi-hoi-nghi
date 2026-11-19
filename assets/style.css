@@ -300,10 +300,6 @@
   max-height: none;
   object-fit: contain;
   object-position: center;
-  background: #fff;
-  padding: 5px 8px;
-  border-radius: 10px;
-}
 
 .luxury-invite .intro-logo {
   display: block;
@@ -312,9 +308,6 @@
   max-height: 125px;
   object-fit: contain;
   margin: 0 auto 22px;
-  background: #fff;
-  padding: 5px;
-  border-radius: 8px;
 }
 
 /* Tieu de THU MOI */
