@@ -1,1277 +1,245 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
-
 /* =========================================
-   1. BIEN MAU VA CAU HINH CHUNG
+   MEKONG VINA - GIAO DIỆN ĐỌC THƯ MỜI
+   OCEAN BLUE & GOLD - RESPONSIVE
 ========================================= */
 
-:root {
-  --blue: #087fc4;
-  --blue-light: #20b4e8;
-  --sky: #83d7f5;
-  --navy: #07345a;
-  --deep: #031d46;
-  --gold: #e4c47c;
-  --gold-light: #f8e6b5;
-  --white: #ffffff;
-  --muted: #66839a;
-  --pale: #eff9ff;
-}
-
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  width: 100%;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
 }
 
 body {
-  margin: 0;
-  width: 100%;
-  min-height: 100vh;
-  font-family: 'Be Vietnam Pro', sans-serif;
+    overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-[hidden] {
-  display: none !important;
-}
-
-/* =========================================
-   2. NEN TRANG CHU VA TRANG THU MOI
-========================================= */
-
-.home,
-.invite-page {
-  color: white;
-  min-height: 100vh;
-  background:
-    radial-gradient(ellipse at 50% 35%, #147db5 0%, transparent 55%),
-    linear-gradient(135deg, #031d46, #07558c 52%, #031d46);
-}
-
-.invite-page {
-  overflow-x: hidden;
-}
-
-/* =========================================
-   3. HEADER VA LOGO
-========================================= */
-
-.site-header,
-.invite-header {
-  width: 100%;
-  height: 76px;
-  padding: 0 clamp(16px, 5vw, 80px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  border-bottom: 1px solid #d9b96e55;
-  background: linear-gradient(90deg, #031d46, #07558c, #031d46);
-  position: relative;
-  z-index: 10;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  color: white;
-  min-width: 0;
-}
-
-/* Logo không có nền trắng do CSS tạo ra */
-.brand-image {
-  display: block;
-  width: 145px;
-  height: 62px;
-  max-height: none;
-  object-fit: contain;
-  object-position: left center;
-
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-  box-shadow: none !important;
-  flex-shrink: 0;
-}
-
-.brand b,
-.brand small {
-  display: block;
-}
-
-.brand b {
-  color: #f6d995;
-  font-size: 13px;
-  letter-spacing: 2px;
-}
-
-.brand small {
-  color: #d5edff;
-  font-size: 8px;
-  letter-spacing: 1.5px;
-  margin-top: 4px;
-}
-
-.brand-logo {
-  width: 42px;
-  height: 42px;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: var(--gold);
-}
-
-.header-link {
-  font-size: 10px;
-  letter-spacing: 1.7px;
-  color: var(--gold-light);
-}
-
-/* =========================================
-   4. TRANG CHU
-========================================= */
-
-.home-main {
-  min-height: calc(100vh - 126px);
-  max-width: 1280px;
-  margin: auto;
-  padding: 70px clamp(22px, 7vw, 100px);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 30px;
-  position: relative;
-  overflow: hidden;
-}
-
-.home-copy {
-  position: relative;
-  z-index: 2;
-}
-
-.eyebrow {
-  font-size: 12px;
-  letter-spacing: 3px;
-  font-weight: 700;
-  color: #cba45c;
-}
-
-.home-copy h1,
-.admin-heading h1 {
-  font: 600 clamp(42px, 6vw, 72px)/1.13 'Playfair Display', serif;
-  margin: 22px 0;
-}
-
-.home-copy h1 em {
-  color: #aee8ff;
-}
-
-.lead {
-  max-width: 510px;
-  line-height: 1.9;
-  color: #d5efff;
-  font-size: 14px;
-}
-
-.home-actions {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  margin-top: 32px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  border: 0;
-  border-radius: 5px;
-  padding: 14px 22px;
-  font: 700 11px 'Be Vietnam Pro';
-  letter-spacing: 1px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-}
-
-.btn-primary {
-  background: linear-gradient(110deg, #bcecff, #fff);
-  color: #075184;
-  box-shadow: 0 10px 25px #00375a55;
-}
-
-.btn-primary:hover,
-.btn-gold:hover {
-  transform: translateY(-2px);
-}
-
-.text-link {
-  font-size: 12px;
-  color: #e2f6ff;
-  border-bottom: 1px solid #a8e6ff;
-  padding-bottom: 5px;
-}
-
-.feature-row {
-  display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
-  margin-top: 55px;
-  color: #c4eaff;
-  font-size: 10px;
-}
-
-.book-visual {
-  min-height: 470px;
-  display: grid;
-  place-items: center;
-  position: relative;
-  perspective: 1200px;
-}
-
-.mock-book {
-  width: min(100%, 510px);
-  height: 340px;
-  display: flex;
-  filter: drop-shadow(0 35px 28px #002d4c88);
-  transform: rotate(-7deg) rotateY(-8deg);
-  position: relative;
-}
-
-.mock-book::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  height: 100%;
-  width: 10px;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, #b4a078, #fff4d3, #a38a5b);
-}
-
-.mock-page {
-  width: 50%;
-  height: 100%;
-  padding: 32px 25px;
-  background: #fffdf8;
-  color: #145078;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.left-page {
-  border-radius: 5px 0 0 5px;
-}
-
-.right-page {
-  border-radius: 0 5px 5px 0;
-}
-
-.mock-page h2 {
-  font: 600 35px/1.15 'Playfair Display';
-  color: #075184;
-}
-
-.orbit {
-  position: absolute;
-  border: 1px solid #a9eaff44;
-  border-radius: 50%;
-  width: 440px;
-  height: 440px;
-  pointer-events: none;
-}
-
-.orbit-two {
-  width: 530px;
-  height: 530px;
-  border-style: dashed;
-}
-
-.glow {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(55px);
-  background: #5bd7ff55;
-  width: 180px;
-  height: 180px;
-}
-
-.glow-a {
-  top: 5%;
-  right: 10%;
-}
-
-.glow-b {
-  bottom: 0;
-  left: 30%;
-}
-
-.site-footer {
-  text-align: center;
-  padding: 22px;
-  font-size: 9px;
-  letter-spacing: 2px;
-  color: #b7e7ff;
-  border-top: 1px solid #ffffff22;
-}
-
-/* =========================================
-   5. TRANG ADMIN
-========================================= */
-
-.admin-page {
-  background: #f2f9fd;
-  min-height: 100vh;
-  color: #123c5a;
-}
-
-.admin-page .site-header {
-  background: linear-gradient(100deg, #07558d, #078bc8);
-}
-
-.admin-shell {
-  max-width: 940px;
-  margin: 42px auto;
-  padding: 0 20px 70px;
-}
-
-.admin-heading {
-  margin-bottom: 26px;
-}
-
-.admin-heading .eyebrow {
-  color: #138cc4;
-}
-
-.admin-heading h1 {
-  font-size: 42px;
-  color: #064b7b;
-  margin: 10px 0;
-}
-
-.admin-heading > p:last-child {
-  color: #6d879b;
-  font-size: 13px;
-}
-
-.admin-card {
-  background: white;
-  border: 1px solid #d9edf8;
-  border-radius: 14px;
-  padding: 25px;
-  margin: 18px 0;
-  box-shadow: 0 12px 34px #07558d0b;
-}
-
-.section-title {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.step {
-  width: 37px;
-  height: 37px;
-  flex: 0 0 37px;
-  border-radius: 11px;
-  background: #e3f6ff;
-  color: #087fc4;
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-}
-
-.section-title h2 {
-  font-size: 16px;
-  margin: 0;
-  color: #075184;
-}
-
-.section-title p {
-  font-size: 11px;
-  color: #7891a4;
-  margin: 5px 0 0;
-}
-
-.fields {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-}
-
-.fields label {
-  font-size: 11px;
-  font-weight: 700;
-  color: #365a73;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.fields .wide {
-  grid-column: 1 / -1;
-}
-
-.fields input {
-  width: 100%;
-  min-width: 0;
-  font: 400 12px 'Be Vietnam Pro';
-  padding: 12px;
-  border: 1px solid #d6e6ef;
-  border-radius: 7px;
-  background: #fbfdff;
-  color: #163e5a;
-}
-
-.fields input:focus {
-  outline: 2px solid #81d8fa66;
-  border-color: #24a6dd;
-}
-
-.btn-secondary {
-  background: #e7f6fd;
-  color: #0874ae;
-  border: 1px solid #bfe8fa;
-  margin-top: 17px;
-}
-
-.small-note {
-  font-size: 10px;
-  line-height: 1.7;
-  color: #8096a6;
-}
-
-.inline-status {
-  font-size: 11px;
-  color: #17865b;
-}
-
-.admin-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 18px;
-}
-
-.published-result {
-  margin-top: 17px;
-  background: #eaf8ff;
-  border: 1px solid #bce8fa;
-  border-radius: 9px;
-  padding: 15px;
-  font-size: 12px;
-  overflow-wrap: anywhere;
-}
-
-.published-result a {
-  color: #087fc4;
-  text-decoration: underline;
-}
-
-.share-hint {
-  background: #f1f9fd;
-  padding: 14px;
-  border-radius: 8px;
-  font-size: 11px;
-  line-height: 1.8;
-  color: #58788e;
-}
-
-/* =========================================
-   6. TRANG THU MOI - LUXURY OCEAN & GOLD
-========================================= */
-
-.invite-page {
-  min-height: 100vh;
-  min-height: 100dvh;
-  background:
-    radial-gradient(ellipse at 50% 30%, #147db5 0%, transparent 58%),
-    linear-gradient(135deg, #031d46, #07558c 52%, #031d46);
-  overflow-x: hidden;
-}
-
-/* Header thư mời */
-
-.invite-header {
-  height: 76px;
-  background: linear-gradient(90deg, #031d46, #07558c, #031d46);
-  border-bottom: 1px solid #d9b96e88;
-  box-shadow: 0 5px 25px #00152e44;
-}
-
-/* Logo trong header: không tạo nền trắng */
-
-.invite-header .brand-image {
-  background: transparent !important;
-  background-color: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-  box-shadow: none !important;
-  object-fit: contain;
-  object-position: left center;
-}
-
-/* Nút nhạc */
-
-.sound-toggle {
-  border: 1px solid #d9b96e;
-  color: #f8dfa5;
-  background: #ffffff12;
-  border-radius: 30px;
-  padding: 9px 15px;
-  font-size: 10px;
-  letter-spacing: 1px;
-  transition: .25s ease;
-}
-
-.sound-toggle:hover {
-  background: #d9b96e;
-  color: #082d50;
-}
-
-/* Khu vực nội dung */
+/* KHU VỰC CHÍNH */
 
 .invite-main {
-  position: relative;
-  width: 100%;
-  min-height: calc(100vh - 76px);
-  min-height: calc(100dvh - 76px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px 16px 30px;
-  isolation: isolate;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    padding: 16px 20px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Họa tiết nền */
-
-.invite-main::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  opacity: .28;
-  background-image:
-    radial-gradient(circle, #ffffff 1px, transparent 1.5px),
-    radial-gradient(circle, #f4d58d 1px, transparent 1.5px);
-  background-size: 95px 95px, 145px 145px;
-  background-position: 0 0, 40px 35px;
-  animation: sparkle 18s linear infinite;
-}
-
-@keyframes sparkle {
-  to {
-    background-position: 95px 95px, 185px 180px;
-  }
-}
-
-.luxury-decoration {
-  position: fixed;
-  inset: 88px 18px 12px;
-  border: 1px solid #e3c47733;
-  border-radius: 18px;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.luxury-decoration::before,
-.luxury-decoration::after {
-  content: "✦";
-  position: absolute;
-  color: #e6c77c;
-  font-size: 22px;
-  text-shadow: 0 0 18px #f4d58d;
-}
-
-.luxury-decoration::before {
-  top: 12px;
-  left: 15px;
-}
-
-.luxury-decoration::after {
-  bottom: 12px;
-  right: 15px;
-}
-
-/* Loading */
-
-.loading-state {
-  color: #d9f2ff;
-  font-size: 12px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.spinner {
-  width: 17px;
-  height: 17px;
-  border: 2px solid #ffffff55;
-  border-top-color: #fff;
-  border-radius: 50%;
-  animation: spin .8s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-/* =========================================
-   7. BIA THU MOI
-========================================= */
-
-.invite-intro {
-  width: min(94vw, 760px);
-  min-height: min(72vh, 650px);
-  display: grid;
-  place-items: center;
-  padding: 28px;
-  color: #075184;
-  background: linear-gradient(135deg, #fffef8, #f5edda 55%, #fffdf5);
-  border: 3px solid #cba95e;
-  border-radius: 10px;
-  box-shadow:
-    0 0 0 7px #ffffff12,
-    0 0 0 8px #d9b96e99,
-    0 30px 80px #00152ecc;
-}
-
-.intro-frame {
-  width: 100%;
-  min-height: 480px;
-  border: 1px solid #c6a75e;
-  outline: 1px solid #c6a75e;
-  outline-offset: 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 30px;
-}
-
-.intro-logo {
-  display: block;
-  width: min(220px, 65%);
-  max-height: 110px;
-  object-fit: contain;
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  box-shadow: none !important;
-  margin: 0 auto 20px;
-}
-
-.intro-frame .eyebrow {
-  font-size: 19px;
-  font-weight: 800;
-  letter-spacing: 5px;
-  color: #a77a27;
-  margin: 12px 0 20px;
-}
-
-.intro-monogram {
-  width: 68px;
-  height: 68px;
-  border: 1px solid #c7a65d;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font: 600 25px Georgia;
-  color: #b18a42;
-  background: linear-gradient(135deg, #fff, #f6e7bf);
-  box-shadow: 0 0 0 7px #c6a75e18;
-  margin: 18px;
-}
-
-.intro-frame h1 {
-  font: 600 clamp(30px, 5vw, 47px)/1.2 'Playfair Display', serif;
-  margin: 0 0 12px;
-  color: #075184;
-}
-
-.intro-frame > p:not(.eyebrow) {
-  color: #67869b;
-  font-size: 13px;
-  line-height: 1.7;
-  margin: 0 0 25px;
-}
-
-.btn-gold {
-  border: 1px solid #fff0c0;
-  background: linear-gradient(115deg, #9d762f, #f5dfa1 48%, #bd9143);
-  color: #173f5b;
-  padding: 14px 28px;
-  box-shadow: 0 8px 25px #a47e3d55;
-  transition: .3s ease;
-}
-
-.btn-gold:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px #b38c4566;
-}
-
-.intro-frame > small {
-  font-size: 8px;
-  letter-spacing: 2px;
-  color: #8aa1b0;
-  margin-top: 22px;
-}
-
-/* =========================================
-   8. KHUNG SACH LAT 3D
-========================================= */
+/* KHU VỰC ĐỌC SÁCH */
 
 .reader {
-  width: min(96vw, 1200px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+    width: 100%;
+    max-width: 1600px;
+    min-height: calc(100vh - 110px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
 }
 
-/* Khung ngoài: không chừa khoảng trắng quanh sách */
+/* KHUNG SÁCH */
 
 .book-frame {
-  width: fit-content;
-  max-width: 100%;
-  padding: 0 !important;
-  margin: 0 auto;
-  border: 2px solid #d9b96e;
-  border-radius: 4px;
-  background: #d9b96e;
-  overflow: hidden;
-  box-shadow:
-    0 0 0 4px #ffffff12,
-    0 0 30px #d9b96e55,
-    0 30px 65px #00152ecc;
-}
-
-/* Phần tử PageFlip */
-
-.book {
-  position: relative;
-  margin: 0 auto;
-  filter: none;
-}
-
-/* Trang sách */
-
-.page {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* Ảnh PNG và PDF canvas lấp đầy trang */
-
-.page img,
-.page canvas {
-  display: block;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: none !important;
-  max-height: none !important;
-  object-fit: fill !important;
-  object-position: center;
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* Bỏ khoảng hở do PageFlip tạo ra */
-
-.book-frame .stf__parent,
-.book-frame .stf__block,
-.book-frame .stf__item {
-  margin: 0 !important;
-}
-
-/* =========================================
-   9. NUT DIEU KHIEN
-========================================= */
-
-.reader-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  padding: 8px 18px;
-  border: 1px solid #d9b96e88;
-  border-radius: 40px;
-  background: #031d46cc;
-  box-shadow: 0 8px 25px #00152e66;
-  color: #e3f5ff;
-  font-size: 11px;
-}
-
-.reader-controls button {
-  width: 42px;
-  height: 42px;
-  border: 1px solid #d9b96e;
-  border-radius: 50%;
-  color: #f8dfa5;
-  background: #ffffff12;
-  font-size: 23px;
-  transition: .25s ease;
-  touch-action: manipulation;
-}
-
-.reader-controls button:hover {
-  background: linear-gradient(135deg, #f7dfa2, #bd9143);
-  color: #082d50;
-  transform: scale(1.06);
-}
-
-.reader-controls span {
-  min-width: 48px;
-  text-align: center;
-  font-variant-numeric: tabular-nums;
-}
-
-.reader-tip {
-  color: #f1dca8;
-  font-size: 9px;
-  letter-spacing: 1.2px;
-  text-align: center;
-  margin: 0;
-  text-shadow: 0 2px 8px #00152e;
-}
-
-/* Thông báo lỗi */
-
-.error-box {
-  max-width: 650px;
-  width: min(94%, 650px);
-  background: #fff;
-  color: #a43a37;
-  padding: 20px;
-  border-radius: 10px;
-  font-size: 13px;
-  line-height: 1.7;
-  box-shadow: 0 15px 40px #00152e66;
-}
-
-/* =========================================
-   10. MAY TINH - MAN HINH LON
-========================================= */
-
-@media (min-width: 1200px) {
-  .invite-main {
-    padding: 25px 30px 35px;
-  }
-
-  .reader {
-    width: min(94vw, 1250px);
-  }
-
-  .book-frame {
-    max-width: 100%;
-  }
-}
-
-/* =========================================
-   11. TABLET
-========================================= */
-
-@media (max-width: 900px) {
-  .home-main {
-    grid-template-columns: 1fr;
-    padding-top: 45px;
-  }
-
-  .book-visual {
-    min-height: 340px;
-  }
-
-  .admin-shell {
-    margin-top: 28px;
-  }
-}
-
-/* =========================================
-   12. DIEN THOAI
-========================================= */
-
-@media (max-width: 760px) {
-
-  html,
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  .site-header,
-  .invite-header {
-    height: 62px;
-    padding: 0 12px;
-    gap: 8px;
-  }
-
-  .invite-header .brand {
-    gap: 8px;
-  }
-
-  .invite-header .brand-image {
-    width: 100px;
-    height: 48px;
-    max-height: none;
-  }
-
-  .invite-header .brand b {
-    font-size: 10px;
-    letter-spacing: 1px;
-  }
-
-  .invite-header .brand small {
-    font-size: 7px;
-    letter-spacing: 1px;
-  }
-
-  .sound-toggle {
-    padding: 8px 10px;
-    font-size: 9px;
-    flex-shrink: 0;
-  }
-
-  .invite-main {
-    min-height: calc(100vh - 62px);
-    min-height: calc(100dvh - 62px);
-    padding: 14px 8px 20px;
-  }
-
-  .luxury-decoration {
-    inset: 72px 6px 8px;
-    border-radius: 12px;
-  }
-
-  /* Bìa thư trên điện thoại */
-
-  .invite-intro {
-    width: 100%;
-    max-width: 440px;
-    min-height: 0;
-    padding: 13px;
-    border-width: 2px;
-    border-radius: 8px;
-  }
-
-  .intro-frame {
-    min-height: min(68dvh, 570px);
-    padding: 20px 12px;
-    outline-offset: 3px;
-  }
-
-  .intro-logo {
-    width: 155px;
-    max-height: 80px;
-    margin-bottom: 12px;
-  }
-
-  .intro-frame .eyebrow {
-    font-size: 16px;
-    letter-spacing: 3px;
-    margin: 10px 0 14px;
-  }
-
-  .intro-monogram {
-    width: 52px;
-    height: 52px;
-    margin: 12px;
-    font-size: 21px;
-  }
-
-  .intro-frame h1 {
-    font-size: clamp(25px, 7vw, 34px);
-  }
-
-  .intro-frame > p:not(.eyebrow) {
-    font-size: 11px;
-    margin-bottom: 18px;
-  }
-
-  .btn-gold {
-    min-height: 44px;
-    padding: 12px 22px;
-    font-size: 10px;
-  }
-
-  .intro-frame > small {
-    font-size: 7px;
-    margin-top: 16px;
-  }
-
-  /* Sách lật trên điện thoại */
-
-  .reader {
-    width: 100%;
-    max-width: 100%;
-    gap: 12px;
-  }
-
-  .book-frame {
-    width: fit-content;
-    max-width: 100%;
-    padding: 0 !important;
-    border-width: 1px;
-    border-radius: 3px;
-  }
-
-  .book {
-    max-width: 100%;
-  }
-
-  .page img,
-  .page canvas {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: fill !important;
-  }
-
-  /* Thanh điều khiển */
-
-  .reader-controls {
-    gap: 9px;
-    padding: 6px 10px;
-  }
-
-  .reader-controls button {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    font-size: 21px;
-  }
-
-  .reader-controls span {
-    min-width: 40px;
-    font-size: 10px;
-  }
-
-  .reader-tip {
-    font-size: 8px;
-    letter-spacing: .4px;
-  }
-
-  /* Trang chủ */
-
-  .home-main {
-    grid-template-columns: 1fr;
-    padding: 38px 20px;
-    gap: 5px;
-  }
-
-  .home-copy h1 {
-    font-size: 43px;
-  }
-
-  .mock-book {
-    height: 245px;
-    max-width: 390px;
-  }
-
-  .orbit {
-    width: 310px;
-    height: 310px;
-  }
-
-  .orbit-two {
-    width: 370px;
-    height: 370px;
-  }
-
-  /* Admin */
-
-  .admin-shell {
-    padding: 0 14px 40px;
-  }
-
-  .admin-card {
-    padding: 18px;
-  }
-
-  .admin-heading h1 {
-    font-size: 34px;
-  }
-}
-
-/* =========================================
-   13. DIEN THOAI NHO
-========================================= */
-
-@media (max-width: 480px) {
-
-  .invite-header .brand-image {
-    width: 84px;
-    height: 43px;
-  }
-
-  .invite-header .brand b {
-    font-size: 9px;
-  }
-
-  .invite-header .brand small {
-    font-size: 6px;
-  }
-
-  .sound-toggle {
-    padding: 7px 9px;
-  }
-
-  .sound-toggle span {
-    display: none;
-  }
-
-  .invite-main {
-    padding: 10px 5px 16px;
-  }
-
-  .invite-intro {
-    padding: 10px;
-  }
-
-  .intro-frame {
-    min-height: min(66dvh, 510px);
-    padding: 17px 9px;
-  }
-
-  .intro-logo {
-    width: 135px;
-  }
-
-  .intro-frame h1 {
-    font-size: 27px;
-  }
-
-  .reader-controls {
-    gap: 7px;
-  }
-
-  .reader-controls button {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-  }
-
-  .fields {
-    grid-template-columns: 1fr;
-  }
-
-  .fields .wide {
-    grid-column: auto;
-  }
-
-  .home-copy h1 {
-    font-size: 38px;
-  }
-
-  .mock-book {
-    height: 215px;
-  }
-}
-
-/* =========================================
-   14. GIAO DIEN RAT NHO
-========================================= */
-
-@media (max-width: 360px) {
-
-  .invite-header .brand-image {
-    width: 70px;
-  }
-
-  .invite-header .brand {
-    gap: 5px;
-  }
-
-  .intro-frame h1 {
-    font-size: 24px;
-  }
-
-  .reader-controls {
-    gap: 5px;
-    padding: 5px 7px;
-  }
-
-  .reader-controls button {
-    width: 35px;
-    height: 35px;
-    min-width: 35px;
-  }
-}
-
-/* =========================================
-   15. GIAM CHUYEN DONG NEU CAN
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
-  }
-}
-
-
-/* DESKTOP - LARGE INVITATION VIEWER */
-@media (min-width: 761px) {
-
-  .invite-main {
-    min-height: calc(100vh - 76px);
-    padding: 12px 20px 18px;
-  }
-
-  .reader {
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-    gap: 10px;
-  }
-
-  .book-frame {
-    max-width: 100%;
-    width: fit-content;
-    margin: 0 auto;
     padding: 0 !important;
-    border-width: 2px;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #d6b56d;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 12px 35px rgba(0, 35, 75, 0.2);
+}
 
-  .book {
+/* VÙNG HIỂN THỊ SÁCH */
+
+.book {
     margin: 0 auto;
-  }
+    width: 100%;
+    max-width: 100%;
+}
 
-  .reader-controls {
-    margin-top: 4px;
-  }
+/* TỪNG TRANG THƯ MỜI */
+
+.page {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.page img,
+.page canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* NÚT ĐIỀU KHIỂN */
+
+.reader-controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.reader-controls button {
+    min-width: 44px;
+    min-height: 40px;
+    padding: 8px 18px;
+    border: 1px solid #d6b56d;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #087fc2, #00558f);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.reader-controls button:hover {
+    background: linear-gradient(135deg, #d9b76a, #b88b38);
+    transform: translateY(-2px);
+}
+
+/* MÀN HÌNH MÁY TÍNH */
+
+@media (min-width: 1024px) {
+    .invite-main {
+        min-height: calc(100vh - 70px);
+        padding: 10px 20px 16px;
+    }
+
+    .reader {
+        min-height: calc(100vh - 90px);
+        max-width: 1600px;
+        gap: 10px;
+    }
+
+    .book-frame {
+        width: fit-content;
+        max-width: 100%;
+        padding: 0 !important;
+    }
+
+    .book {
+        margin: 0 auto;
+    }
+
+    .reader-controls {
+        margin-top: 4px;
+    }
+}
+
+/* LAPTOP MÀN HÌNH THẤP */
+
+@media (min-width: 761px) and (max-height: 800px) {
+    .invite-main {
+        padding-top: 6px;
+        padding-bottom: 8px;
+    }
+
+    .reader {
+        min-height: calc(100vh - 80px);
+        gap: 6px;
+    }
+}
+
+/* MÁY TÍNH BẢNG */
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    .invite-main {
+        padding: 12px;
+    }
+
+    .reader {
+        min-height: calc(100vh - 100px);
+    }
+
+    .book-frame {
+        max-width: 100%;
+    }
+}
+
+/* ĐIỆN THOẠI */
+
+@media (max-width: 760px) {
+    .invite-main {
+        min-height: calc(100vh - 60px);
+        padding: 8px 6px 14px;
+        align-items: flex-start;
+    }
+
+    .reader {
+        width: 100%;
+        min-height: auto;
+        gap: 12px;
+        justify-content: flex-start;
+    }
+
+    .book-frame {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 !important;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+
+    .book {
+        width: 100%;
+    }
+
+    .page img,
+    .page canvas {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .reader-controls {
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .reader-controls button {
+        min-width: 40px;
+        min-height: 38px;
+        padding: 7px 12px;
+        font-size: 13px;
+    }
+}
+
+/* ĐIỆN THOẠI NHỎ */
+
+@media (max-width: 380px) {
+    .invite-main {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .reader-controls {
+        gap: 5px;
+    }
+
+    .reader-controls button {
+        padding: 6px 9px;
+        font-size: 12px;
+    }
 }
