@@ -5,3 +5,283 @@
 /* Viewer */.invite-header{background:#06436f99}.sound-toggle{border:1px solid #c7ebff66;background:#ffffff13;color:#e7f7ff;border-radius:30px;padding:9px 15px;font-size:10px;letter-spacing:1px;cursor:pointer}.invite-main{min-height:calc(100vh - 76px);display:grid;place-items:center;padding:24px 12px 38px}.loading-state{color:#d9f2ff;font-size:12px;display:flex;gap:12px;align-items:center}.spinner{width:17px;height:17px;border:2px solid #ffffff55;border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.invite-intro{width:min(94vw,760px);min-height:min(72vh,650px);display:grid;place-items:center;background:linear-gradient(135deg,#d8f5ff,#fff 48%,#c6eafa);color:#075184;box-shadow:0 30px 80px #002b4c77;border-radius:5px;padding:30px}.intro-frame{width:100%;min-height:480px;border:1px solid #c6a75e;outline:1px solid #c6a75e;outline-offset:7px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}.intro-frame .eyebrow{color:#b18a42}.intro-monogram{width:72px;height:72px;border:1px solid #c7a65d;border-radius:50%;display:grid;place-items:center;font:600 25px Georgia;color:#b18a42;margin:25px}.intro-frame h1{font:600 clamp(30px,5vw,47px) 'Playfair Display';margin:0 0 12px;color:#075184}.intro-frame>p:not(.eyebrow){color:#67869b;font-size:13px;margin:0 0 30px}.btn-gold{background:linear-gradient(110deg,#b28b43,#f1d99d);color:#173f5b;box-shadow:0 9px 22px #a47e3d33}.intro-frame>small{font-size:8px;letter-spacing:2px;color:#8aa1b0;margin-top:25px}.reader{width:min(96vw,1100px);display:flex;flex-direction:column;align-items:center;gap:16px}.book{margin:auto}.page{background:#fffdf8;overflow:hidden}.page img,.page canvas{width:100%;height:100%;object-fit:contain;display:block;background:#fffdf8}.reader-controls{display:flex;align-items:center;gap:17px;color:#e3f5ff;font-size:11px}.reader-controls button{width:38px;height:38px;border:1px solid #bdeaff77;border-radius:50%;background:#ffffff15;color:#fff;font-size:24px;cursor:pointer}.reader-tip{font-size:9px;letter-spacing:1px;color:#c0eaffaa;margin:0}.error-box{max-width:650px;background:#fff;color:#a43a37;padding:20px;border-radius:10px;font-size:13px;line-height:1.7}
 @media(max-width:760px){.home-main{grid-template-columns:1fr;padding-top:48px;gap:0}.home-copy h1{font-size:48px}.book-visual{min-height:340px}.mock-book{height:245px;max-width:390px}.mock-page{padding:18px 12px}.mock-page h2{font-size:25px}.mock-page b{font-size:21px}.orbit{width:310px;height:310px}.orbit-two{width:370px;height:370px}.feature-row{margin-top:34px;gap:13px}.admin-shell{margin-top:28px}.admin-heading h1{font-size:34px}.admin-card{padding:18px}.invite-intro{min-height:70vh;padding:18px}.intro-frame{min-height:420px}.invite-main{min-height:calc(100vh - 76px);padding:14px 5px}.reader{width:99vw}.reader-controls{gap:10px}.reader-controls button{width:34px;height:34px}.sound-toggle span{display:none}}
 @media(max-width:480px){.fields{grid-template-columns:1fr}.fields .wide{grid-column:auto}.site-header,.invite-header{height:66px;padding:0 17px}.home-copy h1{font-size:42px}.home-actions{gap:16px}.feature-row{font-size:9px}.mock-book{height:215px}.intro-frame{min-height:390px}.intro-frame h1{font-size:30px}}
+
+/* =====================================
+   MEKONG VINA - LUXURY OCEAN & GOLD
+   ===================================== */
+
+[hidden] {
+  display: none !important;
+}
+
+.luxury-invite {
+  position: relative;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at 50% 35%, #147db5 0%, transparent 55%),
+    radial-gradient(circle at 10% 90%, #0c5b9b 0%, transparent 40%),
+    linear-gradient(135deg, #031d46, #07558c 52%, #031d46);
+}
+
+/* Ánh sáng nền */
+.luxury-invite::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .35;
+  background:
+    radial-gradient(circle at 15% 20%, #fff 0 1px, transparent 2px),
+    radial-gradient(circle at 75% 25%, #f4d58d 0 1px, transparent 2px),
+    radial-gradient(circle at 85% 75%, #fff 0 1px, transparent 2px),
+    radial-gradient(circle at 35% 85%, #f4d58d 0 1px, transparent 2px);
+  background-size: 180px 180px;
+  animation: luxury-sparkle 12s linear infinite;
+}
+
+@keyframes luxury-sparkle {
+  0% { background-position: 0 0; }
+  100% { background-position: 180px 180px; }
+}
+
+/* Header và logo */
+.luxury-invite .invite-header {
+  background: linear-gradient(90deg, #031d46ee, #07558cdd, #031d46ee);
+  border-bottom: 1px solid #d9b96e88;
+  box-shadow: 0 5px 30px #00152e66;
+  backdrop-filter: blur(12px);
+}
+
+.luxury-invite .brand-image {
+  width: 108px;
+  max-height: 52px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 3px 6px;
+  border-radius: 7px;
+  box-shadow: 0 0 15px #ffffff22;
+}
+
+.luxury-invite .brand {
+  gap: 14px;
+}
+
+.luxury-invite .brand b {
+  color: #f6d995;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.luxury-invite .brand small {
+  color: #d5edff;
+  font-size: 8px;
+}
+
+/* Nút nhạc */
+.luxury-invite .sound-toggle {
+  border: 1px solid #d9b96e;
+  color: #f8dfa5;
+  background: linear-gradient(135deg, #ffffff16, #d9b96e22);
+  box-shadow: 0 4px 18px #00152e55;
+  transition: .3s ease;
+}
+
+.luxury-invite .sound-toggle:hover {
+  background: #d9b96e;
+  color: #082d50;
+  transform: translateY(-2px);
+}
+
+/* Khu vực chính */
+.luxury-invite .invite-main {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.luxury-decoration {
+  position: fixed;
+  inset: 95px 20px 20px;
+  border: 1px solid #e3c47733;
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.luxury-decoration::before,
+.luxury-decoration::after {
+  content: "✦";
+  position: absolute;
+  color: #e6c77c;
+  font-size: 24px;
+  text-shadow: 0 0 18px #f4d58d;
+}
+
+.luxury-decoration::before {
+  top: 12px;
+  left: 16px;
+}
+
+.luxury-decoration::after {
+  bottom: 12px;
+  right: 16px;
+}
+
+/* Bìa thư mời */
+.luxury-invite .invite-intro {
+  position: relative;
+  background:
+    linear-gradient(135deg, #fffef8, #f5edda 55%, #fffdf5);
+  border: 3px solid #cba95e;
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 7px #ffffff12,
+    0 0 0 8px #d9b96e99,
+    0 30px 90px #00152ecc;
+}
+
+.luxury-invite .intro-frame {
+  border: 1px solid #c6a75e;
+  outline: 1px solid #c6a75e;
+  outline-offset: 7px;
+  position: relative;
+}
+
+.luxury-invite .intro-logo {
+  width: min(220px, 65%);
+  max-height: 90px;
+  object-fit: contain;
+  margin-bottom: 22px;
+}
+
+.luxury-invite .intro-monogram {
+  box-shadow: 0 0 0 7px #c6a75e18;
+  background: linear-gradient(135deg, #fff, #f6e7bf);
+}
+
+.luxury-invite .intro-frame h1 {
+  letter-spacing: 1px;
+}
+
+.luxury-invite .btn-gold {
+  border: 1px solid #fff0c0;
+  background: linear-gradient(115deg, #9d762f, #f5dfa1 48%, #bd9143);
+  box-shadow: 0 8px 25px #a47e3d55;
+  transition: .35s ease;
+}
+
+.luxury-invite .btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px #b38c4566;
+}
+
+/* Khung sách */
+.luxury-invite .reader {
+  position: relative;
+  gap: 22px;
+}
+
+.luxury-invite .book-frame {
+  position: relative;
+  padding: 12px;
+  border: 1px solid #d9b96e;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #d9b96e, #fff1c4, #98702c);
+  box-shadow:
+    0 0 0 5px #ffffff12,
+    0 0 35px #d9b96e55,
+    0 35px 75px #00152ecc;
+}
+
+.luxury-invite .book {
+  position: relative;
+  filter: drop-shadow(0 15px 18px #00152e66);
+}
+
+.luxury-invite .page {
+  background: #fffdf8;
+  box-shadow: inset 0 0 12px #a68c5b18;
+}
+
+.luxury-invite .page canvas,
+.luxury-invite .page img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Thanh điều khiển */
+.luxury-invite .reader-controls {
+  gap: 14px;
+  padding: 9px 18px;
+  border: 1px solid #d9b96e88;
+  border-radius: 40px;
+  background: #031d46aa;
+  box-shadow: 0 8px 25px #00152e66;
+  backdrop-filter: blur(10px);
+}
+
+.luxury-invite .reader-controls button {
+  border: 1px solid #d9b96e;
+  color: #f8dfa5;
+  background: linear-gradient(135deg, #ffffff18, #d9b96e20);
+  transition: .25s ease;
+}
+
+.luxury-invite .reader-controls button:hover {
+  background: linear-gradient(135deg, #f7dfa2, #bd9143);
+  color: #082d50;
+  transform: scale(1.08);
+}
+
+.luxury-invite .reader-tip {
+  color: #f1dca8;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px #00152e;
+}
+
+/* Thông báo lỗi */
+.luxury-invite .error-box {
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 15px 40px #00152e66;
+}
+
+/* Điện thoại */
+@media (max-width: 760px) {
+  .luxury-invite .brand-image {
+    width: 82px;
+    max-height: 43px;
+  }
+
+  .luxury-invite .brand b {
+    font-size: 10px;
+  }
+
+  .luxury-invite .brand small {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .luxury-invite .book-frame {
+    padding: 5px;
+    border-radius: 4px;
+  }
+
+  .luxury-decoration {
+    inset: 78px 7px 10px;
+  }
+
+  .luxury-invite .reader-controls {
+    gap: 8px;
+    padding: 6px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .luxury-invite::before {
+    animation: none;
+  }
+}
