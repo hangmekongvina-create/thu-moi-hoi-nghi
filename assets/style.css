@@ -1,106 +1,599 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
-:root{--blue:#087fc4;--blue2:#20b4e8;--sky:#83d7f5;--navy:#07345a;--deep:#052744;--gold:#e4c47c;--white:#fff;--muted:#66839a;--pale:#eff9ff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Be Vietnam Pro',sans-serif}a{color:inherit;text-decoration:none}.home,.invite-page{background:radial-gradient(ellipse at 75% 45%,#178ec8 0,#0872b2 36%,#064c82 75%,#04385f 100%);color:white;min-height:100vh}.site-header,.invite-header{height:76px;padding:0 clamp(20px,6vw,90px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff26;background:#073c65aa;position:relative;z-index:5}.brand{display:flex;align-items:center;gap:12px;color:white}.brand-logo{height:42px;width:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:#f3d991;font:700 17px Georgia,serif}.brand b,.brand small{display:block}.brand b{font-size:12px;letter-spacing:2px}.brand small{font-size:9px;letter-spacing:2px;color:#c3eaff;margin-top:4px}.header-link{font-size:10px;letter-spacing:1.7px;color:#e8d39e}.home-main{min-height:calc(100vh - 126px);max-width:1280px;margin:auto;padding:70px clamp(22px,7vw,100px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;position:relative;overflow:hidden}.home-copy{position:relative;z-index:2}.eyebrow{font-size:10px;letter-spacing:3px;font-weight:700;color:#f0d79c}.home-copy h1,.admin-heading h1{font:600 clamp(42px,6vw,72px)/1.13 'Playfair Display',serif;margin:22px 0}.home-copy h1 em{color:#aee8ff;font-weight:500}.lead{max-width:510px;line-height:1.9;color:#d5efff;font-size:14px}.home-actions{display:flex;align-items:center;gap:25px;margin-top:32px;flex-wrap:wrap}.btn{border:0;border-radius:5px;padding:14px 22px;font:700 11px 'Be Vietnam Pro';letter-spacing:1px;cursor:pointer;display:inline-flex;align-items:center;gap:18px;justify-content:center}.btn-primary{background:linear-gradient(110deg,#bcecff,#fff);color:#075184;box-shadow:0 10px 25px #00375a55}.btn-primary:hover,.btn-gold:hover{transform:translateY(-2px)}.text-link{font-size:12px;color:#e2f6ff;border-bottom:1px solid #a8e6ff;padding-bottom:5px}.feature-row{display:flex;gap:22px;flex-wrap:wrap;margin-top:55px;color:#c4eaff;font-size:10px;letter-spacing:.5px}.book-visual{min-height:470px;display:grid;place-items:center;position:relative;perspective:1200px}.mock-book{width:min(100%,510px);height:340px;display:flex;filter:drop-shadow(0 35px 28px #002d4c88);transform:rotate(-7deg) rotateY(-8deg);position:relative}.mock-book:after{content:"";position:absolute;left:50%;top:0;height:100%;width:10px;transform:translateX(-50%);background:linear-gradient(90deg,#b4a078,#fff4d3,#a38a5b);z-index:3}.mock-page{width:50%;height:100%;padding:32px 25px;background:linear-gradient(120deg,#fffef8,#e6edf0);color:#145078;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}.left-page{border-radius:5px 0 0 5px;box-shadow:inset -8px 0 15px #0001}.right-page{border-radius:0 5px 5px 0;background:linear-gradient(130deg,#f9f5e9,#fff);box-shadow:inset 8px 0 15px #0001}.mock-page small{font-size:8px;letter-spacing:3px}.mock-page span{font-size:10px;letter-spacing:2px;margin-top:45px}.mock-page b{font:600 28px 'Playfair Display';margin:8px}.mock-page .line{width:45px;height:1px;background:#c4a75f;margin:28px}.mock-page h2{font:600 35px/1.15 'Playfair Display';color:#075184;margin:20px 0}.mock-page .tiny{margin:0;color:#9a7b40}.mock-page p{font-size:9px;letter-spacing:2px}.gold-rule{width:50px;height:2px;background:#c8a55d}.floating-note{position:absolute;bottom:20px;right:3%;background:#e6f8ff;color:#075184;padding:13px 18px;font-size:9px;letter-spacing:2px;box-shadow:0 12px 30px #00385b55}.floating-note b{margin-left:15px}.orbit{position:absolute;border:1px solid #a9eaff44;border-radius:50%;width:440px;height:440px}.orbit-two{width:530px;height:530px;border-style:dashed;opacity:.5}.glow{position:absolute;border-radius:50%;filter:blur(55px);background:#5bd7ff55;width:180px;height:180px}.glow-a{top:5%;right:10%}.glow-b{bottom:0;left:30%;background:#c2edff33}.site-footer{text-align:center;padding:22px;font-size:9px;letter-spacing:2px;color:#b7e7ff;border-top:1px solid #ffffff22}.site-footer span{padding:0 8px;color:var(--gold)}
-/* Admin */.admin-page{background:#f2f9fd;min-height:100vh;color:#123c5a}.admin-page .site-header{background:linear-gradient(100deg,#07558d,#078bc8);box-shadow:0 5px 20px #07558d22}.admin-shell{max-width:940px;margin:42px auto;padding:0 20px 70px}.admin-heading{margin-bottom:26px}.admin-heading .eyebrow{color:#138cc4}.admin-heading h1{font-size:42px;color:#064b7b;margin:10px 0}.admin-heading>p:last-child{color:#6d879b;font-size:13px}.admin-card{background:white;border:1px solid #d9edf8;border-radius:14px;padding:25px;margin:18px 0;box-shadow:0 12px 34px #07558d0b}.section-title{display:flex;gap:14px;align-items:center;margin-bottom:20px}.step{width:37px;height:37px;flex:0 0 37px;border-radius:11px;background:#e3f6ff;color:#087fc4;display:grid;place-items:center;font-weight:800;font-size:12px}.section-title h2{font-size:16px;margin:0;color:#075184}.section-title p{font-size:11px;color:#7891a4;margin:5px 0 0}.fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}.fields label{font-size:11px;font-weight:700;color:#365a73;display:flex;flex-direction:column;gap:7px}.fields .wide{grid-column:1/-1}.fields input{font:400 12px 'Be Vietnam Pro';padding:12px;border:1px solid #d6e6ef;border-radius:7px;background:#fbfdff;color:#163e5a;min-width:0}.fields input:focus{outline:2px solid #81d8fa66;border-color:#24a6dd}.btn-secondary{background:#e7f6fd;color:#0874ae;border:1px solid #bfe8fa;margin-top:17px}.small-note{font-size:10px;line-height:1.7;color:#8096a6;margin:14px 0 0}.inline-status{font-size:11px;color:#17865b;margin-left:12px}.admin-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}.published-result{margin-top:17px;background:#eaf8ff;border:1px solid #bce8fa;border-radius:9px;padding:15px;font-size:12px;overflow-wrap:anywhere}.published-result a{color:#087fc4;text-decoration:underline}.share-hint{background:#f1f9fd;padding:14px;border-radius:8px;font-size:11px;line-height:1.8;color:#58788e}.share-hint code{color:#075184;overflow-wrap:anywhere}
-/* Viewer */.invite-header{background:#06436f99}.sound-toggle{border:1px solid #c7ebff66;background:#ffffff13;color:#e7f7ff;border-radius:30px;padding:9px 15px;font-size:10px;letter-spacing:1px;cursor:pointer}.invite-main{min-height:calc(100vh - 76px);display:grid;place-items:center;padding:24px 12px 38px}.loading-state{color:#d9f2ff;font-size:12px;display:flex;gap:12px;align-items:center}.spinner{width:17px;height:17px;border:2px solid #ffffff55;border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.invite-intro{width:min(94vw,760px);min-height:min(72vh,650px);display:grid;place-items:center;background:linear-gradient(135deg,#d8f5ff,#fff 48%,#c6eafa);color:#075184;box-shadow:0 30px 80px #002b4c77;border-radius:5px;padding:30px}.intro-frame{width:100%;min-height:480px;border:1px solid #c6a75e;outline:1px solid #c6a75e;outline-offset:7px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}.intro-frame .eyebrow{color:#b18a42}.intro-monogram{width:72px;height:72px;border:1px solid #c7a65d;border-radius:50%;display:grid;place-items:center;font:600 25px Georgia;color:#b18a42;margin:25px}.intro-frame h1{font:600 clamp(30px,5vw,47px) 'Playfair Display';margin:0 0 12px;color:#075184}.intro-frame>p:not(.eyebrow){color:#67869b;font-size:13px;margin:0 0 30px}.btn-gold{background:linear-gradient(110deg,#b28b43,#f1d99d);color:#173f5b;box-shadow:0 9px 22px #a47e3d33}.intro-frame>small{font-size:8px;letter-spacing:2px;color:#8aa1b0;margin-top:25px}.reader{width:min(96vw,1100px);display:flex;flex-direction:column;align-items:center;gap:16px}.book{margin:auto}.page{background:#fffdf8;overflow:hidden}.page img,.page canvas{width:100%;height:100%;object-fit:contain;display:block;background:#fffdf8}.reader-controls{display:flex;align-items:center;gap:17px;color:#e3f5ff;font-size:11px}.reader-controls button{width:38px;height:38px;border:1px solid #bdeaff77;border-radius:50%;background:#ffffff15;color:#fff;font-size:24px;cursor:pointer}.reader-tip{font-size:9px;letter-spacing:1px;color:#c0eaffaa;margin:0}.error-box{max-width:650px;background:#fff;color:#a43a37;padding:20px;border-radius:10px;font-size:13px;line-height:1.7}
-@media(max-width:760px){.home-main{grid-template-columns:1fr;padding-top:48px;gap:0}.home-copy h1{font-size:48px}.book-visual{min-height:340px}.mock-book{height:245px;max-width:390px}.mock-page{padding:18px 12px}.mock-page h2{font-size:25px}.mock-page b{font-size:21px}.orbit{width:310px;height:310px}.orbit-two{width:370px;height:370px}.feature-row{margin-top:34px;gap:13px}.admin-shell{margin-top:28px}.admin-heading h1{font-size:34px}.admin-card{padding:18px}.invite-intro{min-height:70vh;padding:18px}.intro-frame{min-height:420px}.invite-main{min-height:calc(100vh - 76px);padding:14px 5px}.reader{width:99vw}.reader-controls{gap:10px}.reader-controls button{width:34px;height:34px}.sound-toggle span{display:none}}
-@media(max-width:480px){.fields{grid-template-columns:1fr}.fields .wide{grid-column:auto}.site-header,.invite-header{height:66px;padding:0 17px}.home-copy h1{font-size:42px}.home-actions{gap:16px}.feature-row{font-size:9px}.mock-book{height:215px}.intro-frame{min-height:390px}.intro-frame h1{font-size:30px}}
 
-/* =====================================
-   MEKONG VINA - LUXURY OCEAN & GOLD
-   ===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* =========================================
+   1. BIEN MAU VA CAU HINH CHUNG
+========================================= */
+
+:root {
+  --blue: #087fc4;
+  --blue-light: #20b4e8;
+  --sky: #83d7f5;
+  --navy: #07345a;
+  --deep: #031d46;
+  --gold: #e4c47c;
+  --gold-light: #f8e6b5;
+  --white: #ffffff;
+  --muted: #66839a;
+  --pale: #eff9ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
 
 [hidden] {
   display: none !important;
 }
 
-.luxury-invite {
-  position: relative;
-  overflow-x: hidden;
+/* =========================================
+   2. NEN TRANG CHU VA TRANG THU MOI
+========================================= */
+
+.home,
+.invite-page {
+  color: white;
+  min-height: 100vh;
   background:
     radial-gradient(ellipse at 50% 35%, #147db5 0%, transparent 55%),
-    radial-gradient(circle at 10% 90%, #0c5b9b 0%, transparent 40%),
     linear-gradient(135deg, #031d46, #07558c 52%, #031d46);
 }
 
-/* Ánh sáng nền */
-.luxury-invite::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: .35;
-  background:
-    radial-gradient(circle at 15% 20%, #fff 0 1px, transparent 2px),
-    radial-gradient(circle at 75% 25%, #f4d58d 0 1px, transparent 2px),
-    radial-gradient(circle at 85% 75%, #fff 0 1px, transparent 2px),
-    radial-gradient(circle at 35% 85%, #f4d58d 0 1px, transparent 2px);
-  background-size: 180px 180px;
-  animation: luxury-sparkle 12s linear infinite;
+.invite-page {
+  overflow-x: hidden;
 }
 
-@keyframes luxury-sparkle {
-  0% { background-position: 0 0; }
-  100% { background-position: 180px 180px; }
+/* =========================================
+   3. HEADER VA LOGO
+========================================= */
+
+.site-header,
+.invite-header {
+  width: 100%;
+  height: 76px;
+  padding: 0 clamp(16px, 5vw, 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #d9b96e55;
+  background: linear-gradient(90deg, #031d46, #07558c, #031d46);
+  position: relative;
+  z-index: 10;
 }
 
-/* Header và logo */
-.luxury-invite .invite-header {
-  background: linear-gradient(90deg, #031d46ee, #07558cdd, #031d46ee);
-  border-bottom: 1px solid #d9b96e88;
-  box-shadow: 0 5px 30px #00152e66;
-  backdrop-filter: blur(12px);
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: white;
+  min-width: 0;
 }
 
-.luxury-invite .brand-image {
-  width: 108px;
-  max-height: 52px;
+/* Logo không có nền trắng do CSS tạo ra */
+.brand-image {
+  display: block;
+  width: 145px;
+  height: 62px;
+  max-height: none;
   object-fit: contain;
+  object-position: left center;
+
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  flex-shrink: 0;
 }
 
-.luxury-invite .brand {
-  gap: 14px;
+.brand b,
+.brand small {
+  display: block;
 }
 
-.luxury-invite .brand b {
+.brand b {
   color: #f6d995;
   font-size: 13px;
   letter-spacing: 2px;
 }
 
-.luxury-invite .brand small {
+.brand small {
   color: #d5edff;
   font-size: 8px;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
 }
 
-/* Nút nhạc */
-.luxury-invite .sound-toggle {
-  border: 1px solid #d9b96e;
-  color: #f8dfa5;
-  background: linear-gradient(135deg, #ffffff16, #d9b96e22);
-  box-shadow: 0 4px 18px #00152e55;
-  transition: .3s ease;
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
 }
 
-.luxury-invite .sound-toggle:hover {
-  background: #d9b96e;
-  color: #082d50;
+.header-link {
+  font-size: 10px;
+  letter-spacing: 1.7px;
+  color: var(--gold-light);
+}
+
+/* =========================================
+   4. TRANG CHU
+========================================= */
+
+.home-main {
+  min-height: calc(100vh - 126px);
+  max-width: 1280px;
+  margin: auto;
+  padding: 70px clamp(22px, 7vw, 100px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #cba45c;
+}
+
+.home-copy h1,
+.admin-heading h1 {
+  font: 600 clamp(42px, 6vw, 72px)/1.13 'Playfair Display', serif;
+  margin: 22px 0;
+}
+
+.home-copy h1 em {
+  color: #aee8ff;
+}
+
+.lead {
+  max-width: 510px;
+  line-height: 1.9;
+  color: #d5efff;
+  font-size: 14px;
+}
+
+.home-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 0;
+  border-radius: 5px;
+  padding: 14px 22px;
+  font: 700 11px 'Be Vietnam Pro';
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: linear-gradient(110deg, #bcecff, #fff);
+  color: #075184;
+  box-shadow: 0 10px 25px #00375a55;
+}
+
+.btn-primary:hover,
+.btn-gold:hover {
   transform: translateY(-2px);
 }
 
-/* Khu vực chính */
-.luxury-invite .invite-main {
+.text-link {
+  font-size: 12px;
+  color: #e2f6ff;
+  border-bottom: 1px solid #a8e6ff;
+  padding-bottom: 5px;
+}
+
+.feature-row {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 55px;
+  color: #c4eaff;
+  font-size: 10px;
+}
+
+.book-visual {
+  min-height: 470px;
+  display: grid;
+  place-items: center;
   position: relative;
-  z-index: 1;
+  perspective: 1200px;
+}
+
+.mock-book {
+  width: min(100%, 510px);
+  height: 340px;
+  display: flex;
+  filter: drop-shadow(0 35px 28px #002d4c88);
+  transform: rotate(-7deg) rotateY(-8deg);
+  position: relative;
+}
+
+.mock-book::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #b4a078, #fff4d3, #a38a5b);
+}
+
+.mock-page {
+  width: 50%;
+  height: 100%;
+  padding: 32px 25px;
+  background: #fffdf8;
+  color: #145078;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.left-page {
+  border-radius: 5px 0 0 5px;
+}
+
+.right-page {
+  border-radius: 0 5px 5px 0;
+}
+
+.mock-page h2 {
+  font: 600 35px/1.15 'Playfair Display';
+  color: #075184;
+}
+
+.orbit {
+  position: absolute;
+  border: 1px solid #a9eaff44;
+  border-radius: 50%;
+  width: 440px;
+  height: 440px;
+  pointer-events: none;
+}
+
+.orbit-two {
+  width: 530px;
+  height: 530px;
+  border-style: dashed;
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(55px);
+  background: #5bd7ff55;
+  width: 180px;
+  height: 180px;
+}
+
+.glow-a {
+  top: 5%;
+  right: 10%;
+}
+
+.glow-b {
+  bottom: 0;
+  left: 30%;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 22px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #b7e7ff;
+  border-top: 1px solid #ffffff22;
+}
+
+/* =========================================
+   5. TRANG ADMIN
+========================================= */
+
+.admin-page {
+  background: #f2f9fd;
+  min-height: 100vh;
+  color: #123c5a;
+}
+
+.admin-page .site-header {
+  background: linear-gradient(100deg, #07558d, #078bc8);
+}
+
+.admin-shell {
+  max-width: 940px;
+  margin: 42px auto;
+  padding: 0 20px 70px;
+}
+
+.admin-heading {
+  margin-bottom: 26px;
+}
+
+.admin-heading .eyebrow {
+  color: #138cc4;
+}
+
+.admin-heading h1 {
+  font-size: 42px;
+  color: #064b7b;
+  margin: 10px 0;
+}
+
+.admin-heading > p:last-child {
+  color: #6d879b;
+  font-size: 13px;
+}
+
+.admin-card {
+  background: white;
+  border: 1px solid #d9edf8;
+  border-radius: 14px;
+  padding: 25px;
+  margin: 18px 0;
+  box-shadow: 0 12px 34px #07558d0b;
+}
+
+.section-title {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.step {
+  width: 37px;
+  height: 37px;
+  flex: 0 0 37px;
+  border-radius: 11px;
+  background: #e3f6ff;
+  color: #087fc4;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.section-title h2 {
+  font-size: 16px;
+  margin: 0;
+  color: #075184;
+}
+
+.section-title p {
+  font-size: 11px;
+  color: #7891a4;
+  margin: 5px 0 0;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.fields label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #365a73;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.fields .wide {
+  grid-column: 1 / -1;
+}
+
+.fields input {
+  width: 100%;
+  min-width: 0;
+  font: 400 12px 'Be Vietnam Pro';
+  padding: 12px;
+  border: 1px solid #d6e6ef;
+  border-radius: 7px;
+  background: #fbfdff;
+  color: #163e5a;
+}
+
+.fields input:focus {
+  outline: 2px solid #81d8fa66;
+  border-color: #24a6dd;
+}
+
+.btn-secondary {
+  background: #e7f6fd;
+  color: #0874ae;
+  border: 1px solid #bfe8fa;
+  margin-top: 17px;
+}
+
+.small-note {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #8096a6;
+}
+
+.inline-status {
+  font-size: 11px;
+  color: #17865b;
+}
+
+.admin-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.published-result {
+  margin-top: 17px;
+  background: #eaf8ff;
+  border: 1px solid #bce8fa;
+  border-radius: 9px;
+  padding: 15px;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.published-result a {
+  color: #087fc4;
+  text-decoration: underline;
+}
+
+.share-hint {
+  background: #f1f9fd;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #58788e;
+}
+
+/* =========================================
+   6. TRANG THU MOI - LUXURY OCEAN & GOLD
+========================================= */
+
+.invite-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+    radial-gradient(ellipse at 50% 30%, #147db5 0%, transparent 58%),
+    linear-gradient(135deg, #031d46, #07558c 52%, #031d46);
+  overflow-x: hidden;
+}
+
+/* Header thư mời */
+
+.invite-header {
+  height: 76px;
+  background: linear-gradient(90deg, #031d46, #07558c, #031d46);
+  border-bottom: 1px solid #d9b96e88;
+  box-shadow: 0 5px 25px #00152e44;
+}
+
+/* Logo trong header: không tạo nền trắng */
+
+.invite-header .brand-image {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* Nút nhạc */
+
+.sound-toggle {
+  border: 1px solid #d9b96e;
+  color: #f8dfa5;
+  background: #ffffff12;
+  border-radius: 30px;
+  padding: 9px 15px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition: .25s ease;
+}
+
+.sound-toggle:hover {
+  background: #d9b96e;
+  color: #082d50;
+}
+
+/* Khu vực nội dung */
+
+.invite-main {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 76px);
+  min-height: calc(100dvh - 76px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px 30px;
   isolation: isolate;
+}
+
+/* Họa tiết nền */
+
+.invite-main::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: .28;
+  background-image:
+    radial-gradient(circle, #ffffff 1px, transparent 1.5px),
+    radial-gradient(circle, #f4d58d 1px, transparent 1.5px);
+  background-size: 95px 95px, 145px 145px;
+  background-position: 0 0, 40px 35px;
+  animation: sparkle 18s linear infinite;
+}
+
+@keyframes sparkle {
+  to {
+    background-position: 95px 95px, 185px 180px;
+  }
 }
 
 .luxury-decoration {
   position: fixed;
-  inset: 95px 20px 20px;
+  inset: 88px 18px 12px;
   border: 1px solid #e3c47733;
-  border-radius: 20px;
+  border-radius: 18px;
   pointer-events: none;
   z-index: -1;
 }
@@ -110,225 +603,642 @@
   content: "✦";
   position: absolute;
   color: #e6c77c;
-  font-size: 24px;
+  font-size: 22px;
   text-shadow: 0 0 18px #f4d58d;
 }
 
 .luxury-decoration::before {
   top: 12px;
-  left: 16px;
+  left: 15px;
 }
 
 .luxury-decoration::after {
   bottom: 12px;
-  right: 16px;
+  right: 15px;
 }
 
-/* Bìa thư mời */
-.luxury-invite .invite-intro {
-  position: relative;
-  background:
-    linear-gradient(135deg, #fffef8, #f5edda 55%, #fffdf5);
+/* Loading */
+
+.loading-state {
+  color: #d9f2ff;
+  font-size: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.spinner {
+  width: 17px;
+  height: 17px;
+  border: 2px solid #ffffff55;
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* =========================================
+   7. BIA THU MOI
+========================================= */
+
+.invite-intro {
+  width: min(94vw, 760px);
+  min-height: min(72vh, 650px);
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  color: #075184;
+  background: linear-gradient(135deg, #fffef8, #f5edda 55%, #fffdf5);
   border: 3px solid #cba95e;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow:
     0 0 0 7px #ffffff12,
     0 0 0 8px #d9b96e99,
-    0 30px 90px #00152ecc;
+    0 30px 80px #00152ecc;
 }
 
-.luxury-invite .intro-frame {
+.intro-frame {
+  width: 100%;
+  min-height: 480px;
   border: 1px solid #c6a75e;
   outline: 1px solid #c6a75e;
-  outline-offset: 7px;
-  position: relative;
-}
-
-.luxury-invite .intro-logo {
-  width: min(220px, 65%);
-  max-height: 90px;
-  object-fit: contain;
-  margin-bottom: 22px;
-}
-
-.luxury-invite .intro-monogram {
-  box-shadow: 0 0 0 7px #c6a75e18;
-  background: linear-gradient(135deg, #fff, #f6e7bf);
-}
-
-.luxury-invite .intro-frame h1 {
-  letter-spacing: 1px;
-}
-
-.luxury-invite .btn-gold {
-  border: 1px solid #fff0c0;
-  background: linear-gradient(115deg, #9d762f, #f5dfa1 48%, #bd9143);
-  box-shadow: 0 8px 25px #a47e3d55;
-  transition: .35s ease;
-}
-
-.luxury-invite .btn-gold:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px #b38c4566;
-}
-
-/* Khung sách */
-.luxury-invite .reader {
-  position: relative;
-  gap: 22px;
-}
-
-.luxury-invite .book-frame {
-  position: relative;
-  padding: 12px;
-  border: 1px solid #d9b96e;
-  border-radius: 5px;
-  background: linear-gradient(135deg, #d9b96e, #fff1c4, #98702c);
-  box-shadow:
-    0 0 0 5px #ffffff12,
-    0 0 35px #d9b96e55,
-    0 35px 75px #00152ecc;
-}
-
-.luxury-invite .book {
-  position: relative;
-  filter: drop-shadow(0 15px 18px #00152e66);
-}
-
-.luxury-invite .page {
-  background: #fffdf8;
-  box-shadow: inset 0 0 12px #a68c5b18;
-}
-
-.luxury-invite .page canvas,
-.luxury-invite .page img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Thanh điều khiển */
-.luxury-invite .reader-controls {
-  gap: 14px;
-  padding: 9px 18px;
-  border: 1px solid #d9b96e88;
-  border-radius: 40px;
-  background: #031d46aa;
-  box-shadow: 0 8px 25px #00152e66;
-  backdrop-filter: blur(10px);
-}
-
-.luxury-invite .reader-controls button {
-  border: 1px solid #d9b96e;
-  color: #f8dfa5;
-  background: linear-gradient(135deg, #ffffff18, #d9b96e20);
-  transition: .25s ease;
-}
-
-.luxury-invite .reader-controls button:hover {
-  background: linear-gradient(135deg, #f7dfa2, #bd9143);
-  color: #082d50;
-  transform: scale(1.08);
-}
-
-.luxury-invite .reader-tip {
-  color: #f1dca8;
-  letter-spacing: 1.5px;
-  text-shadow: 0 2px 8px #00152e;
-}
-
-/* Thông báo lỗi */
-.luxury-invite .error-box {
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 15px 40px #00152e66;
-}
-
-/* Điện thoại */
-@media (max-width: 760px) {
-  .luxury-invite .brand-image {
-    width: 82px;
-    max-height: 43px;
-  }
-
-  .luxury-invite .brand b {
-    font-size: 10px;
-  }
-
-  .luxury-invite .brand small {
-    font-size: 7px;
-    letter-spacing: 1px;
-  }
-
-  .luxury-invite .book-frame {
-    padding: 5px;
-    border-radius: 4px;
-  }
-
-  .luxury-decoration {
-    inset: 78px 7px 10px;
-  }
-
-  .luxury-invite .reader-controls {
-    gap: 8px;
-    padding: 6px 12px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .luxury-invite::before {
-    animation: none;
-  }
-}
-
-/* LOGO MEKONG VINA - REFINED */
-.luxury-invite .brand {
+  outline-offset: 6px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 14px;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
 }
 
-.luxury-invite .brand-image {
+.intro-logo {
   display: block;
-  width: 145px;
-  height: 76px;
-  max-height: none;
+  width: min(220px, 65%);
+  max-height: 110px;
   object-fit: contain;
-  object-position: center;
-
-.luxury-invite .intro-logo {
-  display: block;
-  width: 220px;
-  height: auto;
-  max-height: 125px;
-  object-fit: contain;
-  margin: 0 auto 22px;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  margin: 0 auto 20px;
 }
 
-/* Tieu de THU MOI */
-.luxury-invite .eyebrow {
+.intro-frame .eyebrow {
   font-size: 19px;
   font-weight: 800;
   letter-spacing: 5px;
   color: #a77a27;
-  margin: 18px 0 24px;
-  text-shadow: 0 1px 0 #fff;
+  margin: 12px 0 20px;
 }
 
+.intro-monogram {
+  width: 68px;
+  height: 68px;
+  border: 1px solid #c7a65d;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font: 600 25px Georgia;
+  color: #b18a42;
+  background: linear-gradient(135deg, #fff, #f6e7bf);
+  box-shadow: 0 0 0 7px #c6a75e18;
+  margin: 18px;
+}
+
+.intro-frame h1 {
+  font: 600 clamp(30px, 5vw, 47px)/1.2 'Playfair Display', serif;
+  margin: 0 0 12px;
+  color: #075184;
+}
+
+.intro-frame > p:not(.eyebrow) {
+  color: #67869b;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0 0 25px;
+}
+
+.btn-gold {
+  border: 1px solid #fff0c0;
+  background: linear-gradient(115deg, #9d762f, #f5dfa1 48%, #bd9143);
+  color: #173f5b;
+  padding: 14px 28px;
+  box-shadow: 0 8px 25px #a47e3d55;
+  transition: .3s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px #b38c4566;
+}
+
+.intro-frame > small {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #8aa1b0;
+  margin-top: 22px;
+}
+
+/* =========================================
+   8. KHUNG SACH LAT 3D
+========================================= */
+
+.reader {
+  width: min(96vw, 1200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Khung ngoài: không chừa khoảng trắng quanh sách */
+
+.book-frame {
+  width: fit-content;
+  max-width: 100%;
+  padding: 0 !important;
+  margin: 0 auto;
+  border: 2px solid #d9b96e;
+  border-radius: 4px;
+  background: #d9b96e;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 4px #ffffff12,
+    0 0 30px #d9b96e55,
+    0 30px 65px #00152ecc;
+}
+
+/* Phần tử PageFlip */
+
+.book {
+  position: relative;
+  margin: 0 auto;
+  filter: none;
+}
+
+/* Trang sách */
+
+.page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Ảnh PNG và PDF canvas lấp đầy trang */
+
+.page img,
+.page canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: fill !important;
+  object-position: center;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Bỏ khoảng hở do PageFlip tạo ra */
+
+.book-frame .stf__parent,
+.book-frame .stf__block,
+.book-frame .stf__item {
+  margin: 0 !important;
+}
+
+/* =========================================
+   9. NUT DIEU KHIEN
+========================================= */
+
+.reader-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 8px 18px;
+  border: 1px solid #d9b96e88;
+  border-radius: 40px;
+  background: #031d46cc;
+  box-shadow: 0 8px 25px #00152e66;
+  color: #e3f5ff;
+  font-size: 11px;
+}
+
+.reader-controls button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #d9b96e;
+  border-radius: 50%;
+  color: #f8dfa5;
+  background: #ffffff12;
+  font-size: 23px;
+  transition: .25s ease;
+  touch-action: manipulation;
+}
+
+.reader-controls button:hover {
+  background: linear-gradient(135deg, #f7dfa2, #bd9143);
+  color: #082d50;
+  transform: scale(1.06);
+}
+
+.reader-controls span {
+  min-width: 48px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.reader-tip {
+  color: #f1dca8;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 2px 8px #00152e;
+}
+
+/* Thông báo lỗi */
+
+.error-box {
+  max-width: 650px;
+  width: min(94%, 650px);
+  background: #fff;
+  color: #a43a37;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.7;
+  box-shadow: 0 15px 40px #00152e66;
+}
+
+/* =========================================
+   10. MAY TINH - MAN HINH LON
+========================================= */
+
+@media (min-width: 1200px) {
+  .invite-main {
+    padding: 25px 30px 35px;
+  }
+
+  .reader {
+    width: min(94vw, 1250px);
+  }
+
+  .book-frame {
+    max-width: 100%;
+  }
+}
+
+/* =========================================
+   11. TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .home-main {
+    grid-template-columns: 1fr;
+    padding-top: 45px;
+  }
+
+  .book-visual {
+    min-height: 340px;
+  }
+
+  .admin-shell {
+    margin-top: 28px;
+  }
+}
+
+/* =========================================
+   12. DIEN THOAI
+========================================= */
+
 @media (max-width: 760px) {
-  .luxury-invite .brand-image {
-    width: 105px;
-    height: 58px;
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
-  .luxury-invite .intro-logo {
-    width: 165px;
-    max-height: 95px;
+  .site-header,
+  .invite-header {
+    height: 62px;
+    padding: 0 12px;
+    gap: 8px;
   }
 
-  .luxury-invite .eyebrow {
+  .invite-header .brand {
+    gap: 8px;
+  }
+
+  .invite-header .brand-image {
+    width: 100px;
+    height: 48px;
+    max-height: none;
+  }
+
+  .invite-header .brand b {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .invite-header .brand small {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .sound-toggle {
+    padding: 8px 10px;
+    font-size: 9px;
+    flex-shrink: 0;
+  }
+
+  .invite-main {
+    min-height: calc(100vh - 62px);
+    min-height: calc(100dvh - 62px);
+    padding: 14px 8px 20px;
+  }
+
+  .luxury-decoration {
+    inset: 72px 6px 8px;
+    border-radius: 12px;
+  }
+
+  /* Bìa thư trên điện thoại */
+
+  .invite-intro {
+    width: 100%;
+    max-width: 440px;
+    min-height: 0;
+    padding: 13px;
+    border-width: 2px;
+    border-radius: 8px;
+  }
+
+  .intro-frame {
+    min-height: min(68dvh, 570px);
+    padding: 20px 12px;
+    outline-offset: 3px;
+  }
+
+  .intro-logo {
+    width: 155px;
+    max-height: 80px;
+    margin-bottom: 12px;
+  }
+
+  .intro-frame .eyebrow {
     font-size: 16px;
     letter-spacing: 3px;
+    margin: 10px 0 14px;
+  }
+
+  .intro-monogram {
+    width: 52px;
+    height: 52px;
+    margin: 12px;
+    font-size: 21px;
+  }
+
+  .intro-frame h1 {
+    font-size: clamp(25px, 7vw, 34px);
+  }
+
+  .intro-frame > p:not(.eyebrow) {
+    font-size: 11px;
+    margin-bottom: 18px;
+  }
+
+  .btn-gold {
+    min-height: 44px;
+    padding: 12px 22px;
+    font-size: 10px;
+  }
+
+  .intro-frame > small {
+    font-size: 7px;
+    margin-top: 16px;
+  }
+
+  /* Sách lật trên điện thoại */
+
+  .reader {
+    width: 100%;
+    max-width: 100%;
+    gap: 12px;
+  }
+
+  .book-frame {
+    width: fit-content;
+    max-width: 100%;
+    padding: 0 !important;
+    border-width: 1px;
+    border-radius: 3px;
+  }
+
+  .book {
+    max-width: 100%;
+  }
+
+  .page img,
+  .page canvas {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;
+  }
+
+  /* Thanh điều khiển */
+
+  .reader-controls {
+    gap: 9px;
+    padding: 6px 10px;
+  }
+
+  .reader-controls button {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 21px;
+  }
+
+  .reader-controls span {
+    min-width: 40px;
+    font-size: 10px;
+  }
+
+  .reader-tip {
+    font-size: 8px;
+    letter-spacing: .4px;
+  }
+
+  /* Trang chủ */
+
+  .home-main {
+    grid-template-columns: 1fr;
+    padding: 38px 20px;
+    gap: 5px;
+  }
+
+  .home-copy h1 {
+    font-size: 43px;
+  }
+
+  .mock-book {
+    height: 245px;
+    max-width: 390px;
+  }
+
+  .orbit {
+    width: 310px;
+    height: 310px;
+  }
+
+  .orbit-two {
+    width: 370px;
+    height: 370px;
+  }
+
+  /* Admin */
+
+  .admin-shell {
+    padding: 0 14px 40px;
+  }
+
+  .admin-card {
+    padding: 18px;
+  }
+
+  .admin-heading h1 {
+    font-size: 34px;
+  }
+}
+
+/* =========================================
+   13. DIEN THOAI NHO
+========================================= */
+
+@media (max-width: 480px) {
+
+  .invite-header .brand-image {
+    width: 84px;
+    height: 43px;
+  }
+
+  .invite-header .brand b {
+    font-size: 9px;
+  }
+
+  .invite-header .brand small {
+    font-size: 6px;
+  }
+
+  .sound-toggle {
+    padding: 7px 9px;
+  }
+
+  .sound-toggle span {
+    display: none;
+  }
+
+  .invite-main {
+    padding: 10px 5px 16px;
+  }
+
+  .invite-intro {
+    padding: 10px;
+  }
+
+  .intro-frame {
+    min-height: min(66dvh, 510px);
+    padding: 17px 9px;
+  }
+
+  .intro-logo {
+    width: 135px;
+  }
+
+  .intro-frame h1 {
+    font-size: 27px;
+  }
+
+  .reader-controls {
+    gap: 7px;
+  }
+
+  .reader-controls button {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .fields .wide {
+    grid-column: auto;
+  }
+
+  .home-copy h1 {
+    font-size: 38px;
+  }
+
+  .mock-book {
+    height: 215px;
+  }
+}
+
+/* =========================================
+   14. GIAO DIEN RAT NHO
+========================================= */
+
+@media (max-width: 360px) {
+
+  .invite-header .brand-image {
+    width: 70px;
+  }
+
+  .invite-header .brand {
+    gap: 5px;
+  }
+
+  .intro-frame h1 {
+    font-size: 24px;
+  }
+
+  .reader-controls {
+    gap: 5px;
+    padding: 5px 7px;
+  }
+
+  .reader-controls button {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+  }
+}
+
+/* =========================================
+   15. GIAM CHUYEN DONG NEU CAN
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
   }
 }
