@@ -1242,3 +1242,35 @@ button {
     transition-duration: .01ms !important;
   }
 }
+
+/* DESKTOP - LARGE INVITATION VIEWER */
+@media (min-width: 761px) {
+
+  .invite-main {
+    min-height: calc(100vh - 76px);
+    padding: 12px 20px 18px;
+  }
+
+  .reader {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+
+  .book-frame {
+    max-width: 100%;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 !important;
+    border-width: 2px;
+  }
+
+  .book {
+    margin: 0 auto;
+  }
+
+  .reader-controls {
+    margin-top: 4px;
+  }
+}
