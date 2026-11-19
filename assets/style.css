@@ -285,3 +285,61 @@
     animation: none;
   }
 }
+
+/* LOGO MEKONG VINA - REFINED */
+.luxury-invite .brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.luxury-invite .brand-image {
+  display: block;
+  width: 145px;
+  height: 76px;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+
+.luxury-invite .intro-logo {
+  display: block;
+  width: 220px;
+  height: auto;
+  max-height: 125px;
+  object-fit: contain;
+  margin: 0 auto 22px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+/* Tieu de THU MOI */
+.luxury-invite .eyebrow {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  color: #a77a27;
+  margin: 18px 0 24px;
+  text-shadow: 0 1px 0 #fff;
+}
+
+@media (max-width: 760px) {
+  .luxury-invite .brand-image {
+    width: 105px;
+    height: 58px;
+  }
+
+  .luxury-invite .intro-logo {
+    width: 165px;
+    max-height: 95px;
+  }
+
+  .luxury-invite .eyebrow {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
